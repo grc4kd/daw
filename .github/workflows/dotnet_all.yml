@@ -2,7 +2,7 @@ name: .NET All Tests
 
 on:
   schedule:
-  - cron: "52 7 * * *"
+  - cron: "52 19 * * *"
   workflow_dispatch:
 
 jobs:
