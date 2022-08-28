@@ -2,7 +2,5 @@
 
 public class AudioProject
 {
-    private string _name = "defaultProject";
-
-    public string Name => _name;
+    public string Name { get; set; } = "defaultProject";
 }

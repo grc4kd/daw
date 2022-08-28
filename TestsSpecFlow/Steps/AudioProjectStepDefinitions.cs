@@ -1,4 +1,5 @@
-﻿using DigitalAudioWorkstation;
+﻿using System.Diagnostics;
+using DigitalAudioWorkstation;
 using NUnit.Framework;
 
 namespace TestsSpecFlow.Steps;
@@ -10,11 +11,17 @@ public sealed class AudioProjectStepDefinitions
 
     private readonly ScenarioContext _scenarioContext;
 
-    private AudioProject? _project;
+    private AudioProject _project = null!;
 
     public AudioProjectStepDefinitions(ScenarioContext scenarioContext)
     {
         _scenarioContext = scenarioContext;
+    }
+    
+    [Given(@"a new project is created")]
+    public void GivenANewProjectIsCreated()
+    {
+        _project = new AudioProject();
     }
     
     [When(@"a new project is created")]
@@ -23,10 +30,15 @@ public sealed class AudioProjectStepDefinitions
         _project = new AudioProject();
     }
 
+    [When(@"the project name is changed to ""(.*)""")]
+    public void WhenTheProjectNameIsChangedTo(string p0)
+    {
+        _project.Name = p0;
+    }
+    
     [Then(@"the project name should be ""(.*)""")]
     public void ThenTheProjectNameShouldBe(string @default)
     {
-        Assert.NotNull(_project);
-        Assert.AreEqual(@default, _project!.Name);
+        Assert.AreEqual(@default, _project.Name);
     }
 }
