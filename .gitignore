@@ -3,3 +3,5 @@
 /DigitalAudioWorkstation/bin
 /DigitalAudioWorkstation/obj
 
+# ionide files
+.fake
