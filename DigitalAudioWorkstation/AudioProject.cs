@@ -2,7 +2,7 @@
 
 public class AudioProject
 {
-    private const string _name = "defaultProject";
+    private string _name = "defaultProject";
 
-    public static string Name => _name;
+    public string Name => _name;
 }

@@ -17,7 +17,7 @@ public class AudioProjectTests
         using (var mock = AutoMock.GetLoose())
         {
             var sut = mock.Create<AudioProject>();
-            Assert.That(AudioProject.Name, Is.EqualTo("defaultProject"));
+            Assert.That(sut.Name, Is.EqualTo("defaultProject"));
         }
     }
 }
