@@ -97,11 +97,11 @@
           "dependencies": {
             "FluentAssertions": {
               "target": "Package",
-              "version": "[6.2.0, )"
+              "version": "[6.7.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.0.0, )"
+              "version": "[17.3.0, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
@@ -109,7 +109,7 @@
             },
             "SpecFlow.NUnit": {
               "target": "Package",
-              "version": "[3.9.22, )"
+              "version": "[3.9.74, )"
             },
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",
