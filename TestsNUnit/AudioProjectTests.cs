@@ -15,8 +15,18 @@ public class AudioProjectTests
     {
         using var mock = AutoMock.GetLoose();
         var sut = mock.Create<AudioProject>();
-        // DONATE: https://www.kumc.edu/project-eagle.html
-        sut.Name = "project eagle";
-        Assert.That(sut.Name, Is.EqualTo("project eagle"));
+        const string name = "project eagle"; 
+        sut.Name = name;
+        Assert.That(sut.Name, Is.EqualTo(name));
+    }
+
+    [Test]
+    public void ChangeProjectWebsiteTest()
+    {
+        using var mock = AutoMock.GetLoose();
+        var sut = mock.Create<AudioProject>();
+        const string website = "https://www.kumc.edu/project-eagle.html";
+        sut.Website = website;
+        Assert.That(sut.Website, Is.EqualTo(website));
     }
 }

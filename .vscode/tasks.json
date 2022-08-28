@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "test",
-                "${workspaceFolder}/TestsNUnit/TestsNUnit.csproj"
+                "${workspaceFolder}/daw.sln"
             ],
             "problemMatcher": [],
             "group": {

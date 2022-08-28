@@ -41,4 +41,16 @@ public sealed class AudioProjectStepDefinitions
     {
         Assert.AreEqual(@default, _project.Name);
     }
+
+    [When(@"the project website is changed to ""(.*)""")]
+    public void WhenTheProjectWebsiteIsChangedTo(string p0)
+    {
+        _project.Website = p0;
+    }
+
+    [Then(@"the project website should be ""(.*)""")]
+    public void ThenTheProjectWebsiteShouldBe(string p0)
+    {
+        Assert.AreEqual(p0, _project.Website);
+    }
 }
